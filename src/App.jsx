@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Form from "./components/Form";
 import Nav from "./components/Nav";
+import TodoList from "./TodoList";
 
 export default function App(){
   const [showForm, setShowForm]=useState(false);
@@ -10,6 +11,7 @@ export default function App(){
     <div>
       <Nav showForm={showForm} setShowForm={setShowForm}/>
       <Form list={list} showForm={showForm} setList={setList} setShowForm={setShowForm}/>
+      <TodoList list={list}/>
     </div>
   )
 }
