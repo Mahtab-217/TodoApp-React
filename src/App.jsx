@@ -9,7 +9,7 @@ export default function App(){
   return (
     <div>
       <Nav showForm={showForm} setShowForm={setShowForm}/>
-      <Form showForm={showForm} setList={setList}/>
+      <Form list={list} showForm={showForm} setList={setList} setShowForm={setShowForm}/>
     </div>
   )
 }
