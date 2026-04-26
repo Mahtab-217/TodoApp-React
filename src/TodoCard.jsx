@@ -1,6 +1,11 @@
 import { CheckCircle, Trash2 } from "lucide-react";
 
-export default function TodoCard({todo}){
+export default function TodoCard({todo, setList}){
+   function handleClick()
+   {
+    const doneTodo= todo.find((x)=>x.id==id).completed = true;
+    setList((prev)=>[...prev, doneTodo]);   
+}
     return(
         <div  className="w-10/12 border items-center justify-center  bg-linear-60 from-blue-500 to-blue-900 via-blue-400  via-blue-800 bg-clip-text max-w-6px  mt-16 text-center mx-auto  flex flex-col gap-2   ">
             <h1 className="font-bold text-3xl font-serif text-transparent">{todo.todo}</h1>
@@ -10,7 +15,7 @@ export default function TodoCard({todo}){
             <button>
                 <Trash2 size={28}/>
             </button>
-            <button>
+            <button onClick={()=> handleClick(todo.id)}>
                 <CheckCircle size={28}/>
             </button>
         </div>

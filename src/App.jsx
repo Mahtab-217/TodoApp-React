@@ -11,7 +11,7 @@ export default function App(){
     <div>
       <Nav showForm={showForm} setShowForm={setShowForm}/>
       <Form list={list} showForm={showForm} setList={setList} setShowForm={setShowForm}/>
-      <TodoList list={list}/>
+      <TodoList list={list} setList={setList}/>
     </div>
   )
 }
