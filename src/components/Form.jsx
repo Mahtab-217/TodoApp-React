@@ -19,7 +19,7 @@ export default function Form({ list,setList,showForm, setShowForm}){
     return (
 
         <div className="w-full h-screen flex justify-center items-center bg-stone-200 ">
-            <div className="w-7/12 p-3 py-10 border flex flex-col shadow-[3px_3px_10px_0.6]  gap-2">
+            <div className="w-7/12 p-3 py-10 border flex flex-col box-shadow-[3px_3px_10px,0.6]  gap-2">
 
             <h1 className="font-serif text-center text-2xl ">Create Todo</h1>
 
