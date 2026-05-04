@@ -1,6 +1,6 @@
 import { CheckCircle, Trash2 } from "lucide-react";
 
-export default function TodoCard({todo, setList}){
+export default function TodoCard({list,todo, setList}){
     function handleDelete(id){
         setList( (p)=> p.filter((y)=> y.id !==id));
     }
@@ -34,7 +34,7 @@ export default function TodoCard({todo, setList}){
 
         <div className="w-full py-4 items-center text-xl font-bold px-6 flex justify-between fixed bottom-0 left-0 bg-blue-800 text-white ">
             <h1>Total</h1>
-            {/* <p>{List.length}</p> */}
+            <p>{list.length}</p>
         </div>
         </div>
 

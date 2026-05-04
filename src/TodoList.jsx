@@ -4,7 +4,7 @@ export default function TodoList({list, setList}){
     return (
         <div>
             {list.map(x=>(
-               <TodoCard todo={x} setList={setList}/>
+               <TodoCard key={x.id}todo={x} setList={setList} list={list} />
             ))}
             <div className=" w-full border ">
 
