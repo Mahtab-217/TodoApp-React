@@ -3,6 +3,10 @@ import Form from "./components/Form";
 import Nav from "./components/Nav";
 import TodoList from "./TodoList";
 import AllTodo from "./Todo";
+import { Route, Routes } from "react-router-dom";
+
+
+
 
 export default function App(){
   const [showForm, setShowForm]=useState(false);
@@ -10,11 +14,10 @@ export default function App(){
   console.log(list)
   return (
     <div>
-      <div>
-              <Nav showForm={showForm} setShowForm={setShowForm}/>
-      <Form list={list} showForm={showForm} setList={setList} setShowForm={setShowForm}/>
-      <TodoList list={list} setList={setList}/>
-        </div>
+     
+     <Routes>
+       <Route path="/" element={<AllTodo/>}/>
+     </Routes>
     </div>
   )
 }
